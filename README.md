@@ -109,4 +109,4 @@ Real Ferdium behaviour, real Google Chat DOM match, Japanese UI strings, CSP han
 
 ## Licenses
 
-This is a private personal project (no license granted). Third-party notices that must be kept: gchat-slackify (MIT) and Lato (SIL OFL 1.1) — texts in [LICENSES/](LICENSES/).
+This is a personal project published for reference; it is not maintained as an open-source project (no support, issues or PRs are expected). No license has been granted yet. Third-party notices that must be kept: gchat-slackify (MIT) and Lato (SIL OFL 1.1) — texts in [LICENSES/](LICENSES/).
