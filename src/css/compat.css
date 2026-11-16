@@ -1,0 +1,36 @@
+/* Ferdium-specific patches. Intentionally minimal; every rule is gated on html[data-sf-on]. */
+
+/* Composer height. Upstream "fullwidth" gives composer-wrap `flex: 1 1 auto`. If the wrap's parent is a column flex
+   container with spare height, the wrap (and, via align-items: stretch, the composer) grows vertically; in a row parent
+   `align-items: stretch` stretches it to the row height. Keep horizontal fill (width) but never grow/stretch
+   vertically, so an empty composer is one line tall and multi-line text still grows with its content. */
+html[data-sf-on][data-sf-feat-fullwidth] [data-slackify="composer-wrap"] {
+  flex: 0 1 auto !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  align-self: flex-end !important;
+  height: auto !important;
+  min-height: 0 !important;
+  align-items: flex-end !important;
+}
+
+/* Own-message header: if Google already shows a visible sender name inside the row, don't add a second synthetic one. */
+html[data-sf-on][data-sf-feat-selfslack] [role="main"] [data-slackify="self-row"][data-sf-native-name] [data-slackify="self-meta"]::before {
+  display: none !important;
+}
+
+/* Composer vertical size. Evidence: docs/composer-diagnostic.js (v2) on a real Ferdium Google Chat service showed the
+   NATIVE composer card is 104px = 16px padding-top + 64px pill + 24px padding-bottom, where the 64px comes from Google's own
+   `min-height: 64px` on the pill (tagged composer-pill) and on its direct child div; the inner pill has min-height 48px.
+   Slackify itself only added the 1px border. Lower those floors (content still sizes the box, nothing is clipped; overflow is
+   untouched) and make the card padding symmetric and small. Buttons are 32-48px tall, so the pill's content height (~54px)
+   remains the real minimum; result is ~68px. */
+html[data-sf-on][data-sf-feat-composer] [data-slackify="composer"] {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+html[data-sf-on][data-sf-feat-composer] [data-slackify="composer-pill"],
+html[data-sf-on][data-sf-feat-composer] [data-slackify="composer-pill"] > div {
+  min-height: 0 !important;
+}

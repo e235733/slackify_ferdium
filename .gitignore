@@ -1,0 +1,11 @@
+node_modules/
+test-results/
+playwright-report/
+test/visual/screenshots/
+# regenerable build output; only the self-contained installer is tracked
+dist/*
+!dist/install.sh
+*.log
+.DS_Store
+.env
+.env.*

@@ -1,0 +1,21 @@
+{
+  "gchat-slackify": {
+    "repository": "https://github.com/sujeet100/gchat-slackify",
+    "branch": "main",
+    "commit": "89fef5c139e5c167bdc5457c9121a8a9d35d2a0a",
+    "version": "1.4.4",
+    "files": {
+      "config.js": "1f2335516669b51b3e0672c2dfef7e005420e5c6cf3e29cce429e9a01ab7c8e9",
+      "themes.js": "a971e04ed1b54d64181469e29fd12d555a840174ce73a4e5f4e67c6e1939c67c",
+      "styles.js": "0c9e6e66a8d6a0852b3309bea139358100cea562e02313ae752b34709b3fa175",
+      "LICENSE": "3d146fa43472aae924dc4fc7a56a70ad81d9a498460c46a60853b10af6fcb7ef",
+      "tagger.reference.js": "0fe5d7c77fc3fe3ac5295ba9e0afad2613444b9685204bceeefb43d0a478881c",
+      "apply.reference.js": "ce59dea41c4b5ea8046a2d5f1257c44a1322f54f8108a96caf4a45952714eb5b",
+      "fonts/lato-400.woff2": "918b7dc3e2e2d015c16ce08b57bcb64d2253bafc1707658f361e72865498e537",
+      "fonts/lato-700.woff2": "c447dd7677b419db7b21dbdfc6277c7816a913ffda76fd2e52702df538de0e49",
+      "fonts/lato-900.woff2": "08664859baab5ed98f0bf818ed77e38464ff1826dc6406d5ecbd651409afbd92"
+    }
+  },
+  "ferdium-app": { "repository": "https://github.com/ferdium/ferdium-app", "branch": "develop", "commit": "deabf8308f37cde7d9baba5729f90d885fab3341" },
+  "ferdium-recipes": { "repository": "https://github.com/ferdium/ferdium-recipes", "branch": "main", "commit": "d606edecc575a08a22f05d8f6113e8906e3d1012" }
+}

@@ -1,0 +1,273 @@
+{
+  "upstreamVersion": "1.4.4",
+  "SELECTORS": {
+    "sidebarRail": [
+      "c-wiz:has([aria-label=\"List of Direct Messages\"])",
+      "div:has(> [role=\"list\"][aria-label=\"List of Direct Messages\"])",
+      "c-wiz:has([role=\"listitem\"][data-group-id])"
+    ],
+    "dmList": [
+      "[role=\"list\"][aria-label=\"List of Direct Messages\"]",
+      "[role=\"list\"]:has([role=\"listitem\"][data-group-id^=\"dm/\"])"
+    ],
+    "spacesList": [
+      "[role=\"list\"][aria-label=\"List of spaces.\"]",
+      "[role=\"list\"]:has([role=\"listitem\"][data-group-id^=\"space/\"])"
+    ],
+    "topBar": [
+      "header[role=\"banner\"]",
+      "[role=\"banner\"]"
+    ],
+    "search": [
+      "[role=\"search\"]",
+      "form[role=\"search\"]"
+    ],
+    "conversationPane": [
+      "[role=\"main\"]"
+    ],
+    "composeBox": [
+      "[role=\"textbox\"]"
+    ],
+    "convRow": [
+      "[role=\"listitem\"][data-group-id]"
+    ],
+    "unreadToggle": [
+      "button[role=\"switch\"][aria-label=\"Unread\"]",
+      "button[role=\"switch\"][aria-label*=\"unread\" i]"
+    ],
+    "spaceRow": [
+      "[role=\"listitem\"][data-group-id^=\"space/\"]"
+    ],
+    "dmRow": [
+      "[role=\"listitem\"][data-group-id^=\"dm/\"]"
+    ],
+    "unreadRow": [
+      "[data-is-unread=\"true\"]"
+    ],
+    "starredRow": [
+      "[role=\"listitem\"][data-starred=\"true\"]"
+    ],
+    "meetingRow": [
+      "[role=\"listitem\"][data-group-type=\"10\"]"
+    ],
+    "messageTopic": [
+      "c-wiz[data-topic-id]",
+      "[data-topic-id]"
+    ],
+    "reaction": [
+      "[data-emoji]"
+    ],
+    "userMention": [
+      "[data-user-mention-type]"
+    ],
+    "codeInline": [
+      "[role=\"main\"] code"
+    ],
+    "codeBlock": [
+      "[role=\"main\"] pre"
+    ],
+    "dividerHeading": [
+      "[role=\"heading\"][aria-level=\"2\"]",
+      "[role=\"heading\"]"
+    ],
+    "dateHeading": [
+      "[data-absolute-timestamp][data-format=\"3\"]"
+    ],
+    "threadReply": [
+      "[role=\"main\"] [data-last-reply-time-msec]"
+    ],
+    "messageTimestamp": [
+      "[role=\"main\"] [data-absolute-timestamp]"
+    ],
+    "searchInput": [
+      "[role=\"search\"] input",
+      "[role=\"search\"] [contenteditable]"
+    ],
+    "searchDropdown": [
+      "[role=\"banner\"] [role=\"listbox\"]"
+    ],
+    "bannerMenu": [
+      "[role=\"banner\"] [role=\"menu\"]"
+    ],
+    "newChat": [
+      "[data-slackify=\"rail\"] [data-is-fab]"
+    ],
+    "chatLogo": [
+      "[role=\"banner\"] img[src*=\"chatlogo\"]"
+    ],
+    "selfAvatar": [
+      "[role=\"banner\"] [aria-label^=\"Google Account\"] img",
+      "[role=\"banner\"] img[src*=\"googleusercontent.com\"]"
+    ],
+    "selfMessageAuthor": [
+      "[data-compare-to-self-user=\"true\"][data-name]"
+    ],
+    "mainRow": [
+      "[role=\"main\"] [role=\"listitem\"]",
+      "[role=\"main\"] [role=\"row\"]"
+    ],
+    "messageContainer": [
+      "[role=\"main\"] [data-message-id]",
+      "[role=\"main\"] [data-is-tombstone-message-view]"
+    ],
+    "messageToolbar": [
+      "[role=\"main\"] [role=\"toolbar\"]"
+    ],
+    "senderName": [
+      "[role=\"main\"] span[data-name][data-is-message]"
+    ],
+    "railInteractive": [
+      "button",
+      "[role=\"button\"]",
+      "[role=\"listitem\"]",
+      "[jsaction]"
+    ]
+  },
+  "TAGS": {
+    "rail": "[data-slackify=\"rail\"]",
+    "bubble": "[data-slackify=\"bubble\"]",
+    "lightbtn": "[data-slackify=\"lightbtn\"]",
+    "active": "[role=\"listitem\"][data-slackify=\"active\"]",
+    "stream": "[data-slackify=\"stream\"]",
+    "date": "[data-slackify=\"date\"]",
+    "dateWrap": "[data-slackify=\"datewrap\"]",
+    "statusChip": "[data-slackify=\"status-chip\"]",
+    "avatarWrap": "[data-slackify=\"avatar-wrap\"]",
+    "composer": "[data-slackify=\"composer\"]",
+    "composerWrap": "[data-slackify=\"composer-wrap\"]",
+    "composerPill": "[data-slackify=\"composer-pill\"]",
+    "msgRow": "[data-slackify=\"msgrow\"]",
+    "msgWide": "[data-slackify-wide]",
+    "spaceName": "[data-slackify=\"spacename\"]",
+    "convoTitle": "[data-slackify=\"convo-title\"]",
+    "spaceHeader": "[data-slackify=\"convo-title\"][data-sf-space]",
+    "threadChip": "[data-slackify=\"thread-chip\"]",
+    "replyCount": "[data-slackify=\"reply-count\"]",
+    "threadCurl": "[data-slackify=\"thread-curl\"]",
+    "reactionPill": "[data-slackify=\"reaction-pill\"]",
+    "reactions": "[data-slackify=\"reactions\"]",
+    "reactionAdd": "[data-slackify=\"reaction-add\"]",
+    "unreadLine": "[data-slackify=\"unread-line\"]",
+    "unreadLabel": "[data-slackify=\"unread-label\"]",
+    "selfRow": "[data-slackify=\"self-row\"]",
+    "selfMeta": "[data-slackify=\"self-meta\"]"
+  },
+  "FEATURES": [
+    {
+      "id": "typography",
+      "default": true
+    },
+    {
+      "id": "sidebar",
+      "default": true
+    },
+    {
+      "id": "topbar",
+      "default": true
+    },
+    {
+      "id": "flatten",
+      "default": true
+    },
+    {
+      "id": "fullwidth",
+      "default": true
+    },
+    {
+      "id": "readablewidth",
+      "default": false
+    },
+    {
+      "id": "density",
+      "default": true
+    },
+    {
+      "id": "rowhover",
+      "default": true
+    },
+    {
+      "id": "msgalign",
+      "default": true
+    },
+    {
+      "id": "sendername",
+      "default": true
+    },
+    {
+      "id": "selfslack",
+      "default": true
+    },
+    {
+      "id": "composer",
+      "default": true
+    },
+    {
+      "id": "datedividers",
+      "default": true
+    },
+    {
+      "id": "unreadline",
+      "default": true
+    },
+    {
+      "id": "pills",
+      "default": true
+    },
+    {
+      "id": "avatarshape",
+      "default": true
+    },
+    {
+      "id": "threadreplies",
+      "default": true
+    },
+    {
+      "id": "codestyle",
+      "default": true
+    },
+    {
+      "id": "mentionpills",
+      "default": true
+    },
+    {
+      "id": "activeconv",
+      "default": true
+    },
+    {
+      "id": "unreadbold",
+      "default": true
+    },
+    {
+      "id": "spacehash",
+      "default": true
+    },
+    {
+      "id": "unreadswitch",
+      "default": true
+    },
+    {
+      "id": "hidemeetings",
+      "default": false
+    },
+    {
+      "id": "dimmeetings",
+      "default": false
+    },
+    {
+      "id": "shortcuts",
+      "default": false
+    }
+  ],
+  "theme": "aubergine",
+  "themes": [
+    "aubergine",
+    "jade",
+    "lagoon",
+    "clementine",
+    "banana",
+    "barbra",
+    "mood-indigo",
+    "gray",
+    "tritanopia"
+  ]
+}

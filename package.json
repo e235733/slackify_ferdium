@@ -1,0 +1,30 @@
+{
+  "name": "ferdium-gchat-slackify",
+  "version": "1.0.0",
+  "description": "Slack-style skin for Google Chat in Ferdium (ported from gchat-slackify)",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node src/build/generate-css.mjs && node src/build/build-runtime.mjs",
+    "check": "node scripts/check.mjs",
+    "lint": "eslint .",
+    "test:unit": "node --test test/unit/*.test.mjs",
+    "test:dom": "node --test test/dom/*.test.mjs",
+    "test:visual": "playwright test -c test/visual/playwright.config.mjs",
+    "test:installer": "node --test --test-concurrency=1 test/installer/*.test.mjs",
+    "verify": "npm run build && npm run check && npm run lint && npm run test:unit && npm run test:dom && npm run test:visual && npm run package && npm run test:installer",
+    "package": "node src/build/package-installer.mjs",
+    "report": "node scripts/collect-report.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.0",
+    "@playwright/test": "^1.50.0",
+    "esbuild": "^0.25.0",
+    "eslint": "^9.39.0",
+    "globals": "^16.0.0",
+    "jsdom": "^26.0.0",
+    "postcss": "^8.5.0"
+  }
+}
